@@ -1,0 +1,313 @@
+/* Reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #111;
+  background: #fff;
+}
+
+a {
+  color: #111;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  font-family: 'Amatic SC', cursive;
+  font-weight: 700;
+}
+
+/* HERO */
+.hero {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 120px;
+  height: auto;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  color: #555;
+}
+
+/* Floral background */
+.floral-bg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  height: 200px;
+  background: url('floral.png') no-repeat;
+  background-size: contain;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+/* INTRO */
+.intro {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #cfa15c;
+}
+
+.intro p {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* PRESTATIONS / OBRAS */
+.prestaciones {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.prestaciones h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #cfa15c;
+}
+
+/* Grille responsive pour les projets */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 60px;
+  justify-items: center;
+  margin-top: 50px;
+}
+
+.project {
+  max-width: 500px;
+  text-align: center;
+}
+
+.project img {
+  width: 100%;
+  border-radius: 16px;
+  display: block;
+  margin: 0 auto 25px;
+  transition: transform 0.4s, box-shadow 0.4s;
+  cursor: pointer;
+}
+
+.project img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(255,165,0,0.3);
+}
+
+.project h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.project p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.project ul {
+  list-style: none;
+  padding: 0;
+}
+
+.project ul li {
+  margin: 5px 0;
+}
+
+/* PROCESSUS */
+.processus {
+  padding: 60px 20px;
+  background: #f9f9f9;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.processus h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.processus ol {
+  list-style-position: inside;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* CONTACT */
+.contact {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #f0f0f0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Barre de défilement personnalisée */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255,165,0,0.5);
+  border-radius: 10px;
+  border: 3px solid #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,165,0,0.7);
+}
+
+/* Icônes contact */
+.icon-contact {
+  width: 35px;
+  height: 35px;
+  margin: 0 10px;
+  vertical-align: middle;
+  transition: transform 0.3s;
+}
+
+.icon-contact:hover {
+  transform: scale(1.2);
+}
+
+/* ====== MEDIA QUERIES POUR MOBILE ====== */
+@media screen and (max-width: 900px) {
+  .prestaciones h2 {
+    font-size: 2.2rem; /* titre plus petit sur mobile */
+  }
+
+  .project h3 {
+    font-size: 1.6rem;
+  }
+
+  .project p {
+    font-size: 1rem;
+  }
+
+  .processus h2,
+  .contact h2 {
+    font-size: 2rem;
+  }
+
+  .processus ol {
+    font-size: 1rem;
+  }
+
+  .intro h2 {
+    font-size: 2rem;
+  }
+
+  .intro p {
+    font-size: 1rem;
+  }
+
+  .projects-grid {
+    gap: 40px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .prestaciones h2 {
+    font-size: 1.8rem;
+  }
+
+  .project h3 {
+    font-size: 1.4rem;
+  }
+
+  .project p {
+    font-size: 0.95rem;
+  }
+
+  .processus h2,
+  .contact h2 {
+    font-size: 1.8rem;
+  }
+
+  .intro h2 {
+    font-size: 1.6rem;
+  }
+
+  .intro p {
+    font-size: 0.9rem;
+  }
+
+  .icon-contact {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+
+.flower-background {
+  position: fixed;      /* reste en place quand tu scroll */
+  top: 0;
+  left: 0;
+  width: 100vw;         /* largeur complète de la page */
+  height: 100vh;        /* hauteur complète de la page */
+  background-image: url('fleurs.jpg');
+  background-size: cover;      /* couvre tout l'écran */
+  background-position: center; /* centre l'image */
+  background-repeat: no-repeat;
+  opacity: 0.2;               /* légèrement transparent */
+  z-index: -1;                 /* derrière tout le contenu */
+}
+  
